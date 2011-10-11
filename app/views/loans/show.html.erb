@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Interest rate:</b>
+  <%= @loan.interest_rate %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @loan.state %>
+</p>
+
+<p>
+  <b>Maturity date:</b>
+  <%= @loan.maturity_date %>
+</p>
+
+<p>
+  <b>Origination date:</b>
+  <%= @loan.origination_date %>
+</p>
+
+<p>
+  <b>Loan type:</b>
+  <%= @loan.loan_type %>
+</p>
+
+<p>
+  <b>Loan amt:</b>
+  <%= @loan.loan_amt %>
+</p>
+
+<p>
+  <b>Bank:</b>
+  <%= @loan.bank_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_loan_path(@loan) %> |
+<%= link_to 'Back', loans_path %>

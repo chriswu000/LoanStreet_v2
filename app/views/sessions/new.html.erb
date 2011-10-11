@@ -1,0 +1,18 @@
+<div class="loan_street_form">
+  <% if flash[:alert] -%>
+    <p id="notice"><%= flash[:alert] %></p>
+  <% end -%>
+
+  <%= form_tag do %>
+    <fieldset>
+      <legend>Please enter Bank User Name</legend>
+
+      <div>
+        <label for="user_name">User Name</label>
+        <%= text_field_tag :user_name, params[:user_name] %>
+      </div> 
+
+      <div><%= submit_tag "Login" %></div>
+    </fieldset>
+  <% end %>
+</div>

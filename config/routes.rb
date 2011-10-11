@@ -1,4 +1,16 @@
 V2::Application.routes.draw do
+  controller :sessions do
+    get    'login'  => :new
+    post   'login'  => :create
+    delete 'logout' => :destroy
+  end
+
+
+  resources :loans
+  resources :banks
+
+  root :to => 'sessions#new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

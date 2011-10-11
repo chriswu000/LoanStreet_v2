@@ -1,0 +1,12 @@
+<tr>
+  <td><%= loans.interest_rate %></td>
+  <td><%= loans.state %></td>
+  <td><%= loans.maturity_date %></td>
+  <td><%= loans.origination_date %></td>
+  <td><%= loans.loan_type %></td>
+  <td><%= loans.loan_amt %></td>
+  <td><%= loans.bank_id %></td>
+  <td><%= link_to 'Show', loans %></td>
+  <td><%= link_to 'Edit', edit_loan_path(loans) %></td>
+  <td><%= link_to 'Destroy', loans, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @bank.name %>
+</p>
+
+<p>
+  <b>User name:</b>
+  <%= @bank.user_name %>
+</p>
+
+<p>
+<%= link_to 'Edit', edit_bank_path(@bank) %> |
+<%= link_to 'Back', banks_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Interest rate</th>
+    <th>State</th>
+    <th>Maturity date</th>
+    <th>Origination date</th>
+    <th>Loan type</th>
+    <th>Loan amt</th>
+    <th>Bank</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%= render :partial => 'loans/loans', :collection => @bank.loans %>
+</table>
+<br />
+
+<%= link_to 'New Loan', new_loan_path %>
+
